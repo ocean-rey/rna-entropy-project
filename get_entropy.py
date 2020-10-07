@@ -1,6 +1,7 @@
 import math
 import csv
 import argparse
+
 parser = argparse.ArgumentParser()
 parser.add_argument("window", help="Window size", type=int)
 args = parser.parse_args()
@@ -22,7 +23,7 @@ def get_entropy(seq):
     entropy = []
     window_size = args.window
     window_open = 0;
-    window_close = window_open+window_size;
+    window_close = window_open+window_size - 1;
     while(window_close < len(seq)-1):
         a_count = 0
         g_count = 0
@@ -46,7 +47,7 @@ def get_entropy(seq):
             (t_count/window_size * math.log((t_count if t_count != 0 else 1)/window_size, 2)) - \
             (c_count/window_size * math.log((c_count if c_count != 0 else 1)/window_size, 2)))
         window_open += 1
-        window_close = window_open+window_size
+        window_close += 1
     return(entropy)
 
 
