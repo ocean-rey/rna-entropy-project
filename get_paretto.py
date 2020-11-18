@@ -1,7 +1,6 @@
 import math
 import csv
 import argparse
-import numpy as np
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-k", help="k size", type=int)
