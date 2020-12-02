@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 
 entropies.csv
+paretto.csv
+get_pareto_psuedocode.odt
+get_entropy_psuedocode.odt
