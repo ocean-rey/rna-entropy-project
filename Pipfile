@@ -9,6 +9,10 @@ pylint = "*"
 [packages]
 argparse = "*"
 numpy = "*"
+jupyter = "*"
+pandas = "*"
+scipy = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.9"
